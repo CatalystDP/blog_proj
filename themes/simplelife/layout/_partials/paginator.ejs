@@ -1,0 +1,10 @@
+<%if(page.total>1){%>
+    <div class="pagination right-align">
+        <%- paginator({
+                total:page.total,
+                current:page.current,
+                prev_text:'prev',
+                next_text:'next'
+            })%>
+    </div>
+<%}%>

@@ -1,0 +1,23 @@
+<!--文章列表-->
+<div id="post-list">
+    <% page.posts.sort( 'date', 'desc').each(function(post){%>
+        <%if(is_home()){%>
+            <div class="post-item card white z-depth-1 hoverable" data-post-item data-post-link="/<%=post.path%>" href="/<%= post.path %>">
+                <div class="card-content">
+                    <span class="card-title"><%= post.title%></span>
+                    <article class="grey-text excerpt">
+                        <%- post.excerpt %>
+                    </article>
+                </div>
+                <div class="card-action">
+                    <span class="pink-text accent-2 date-font-small"><%- date(post.updated) %></span>
+                    <% post.tags.each(function(tag){ %>
+                        <a class="chip indigo lighten-3 white-text" href="/<%=tag.path%>">
+                            <%= tag.name %>
+                        </a>
+                        <%}) %>
+                </div>
+            </div>
+            <%}%>
+                <%})%>
+</div>

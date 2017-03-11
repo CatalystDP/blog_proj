@@ -1,0 +1,16 @@
+<div id="category-list" class="card">
+    <header class="card-title common-title">
+        <span class="card-title">
+            分类
+        </span>
+    </header>
+    <div class="divider"></div>
+    <section class="common-title">
+        <% site.categories.each(function(category){ %>
+            <a class="chip grey lighten-1 white-text" href="/<%=category.path%>">
+                <%= category.name %>
+                    <%= category.length%>
+            </a>
+            <%}) %>
+    </section>
+</div>

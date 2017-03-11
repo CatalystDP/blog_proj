@@ -1,0 +1,10 @@
+<%if(is_home()){%>
+    <%- partial('pages/index-page',{page:page})%>
+    <div class="row">
+        <div class="col m7 l7 s12">
+            <%- partial('_partials/paginator') %>
+        </div>
+    </div>
+<%}else if(is_post()){%>
+    <%- partial('pages/post-page.ejs',{page:page})%>
+<%}%>

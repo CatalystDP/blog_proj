@@ -1,0 +1,15 @@
+<%- partial("_partials/head") %>
+
+    <body>
+        <%- partial("_partials/header") %>
+            <section id="wrapper" class="container">
+                <%- body %>
+            </section>
+        <%- partial("_partials/footer") %> 
+        <%- js('js/jquery.min.js')%>
+        <%if(is_home()){%>
+            <%- js('js/index.js') %>
+        <%}%>   
+    </body>
+
+    </html>

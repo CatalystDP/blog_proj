@@ -1,0 +1,17 @@
+<nav class="m12 l12 s12  indigo" style="position: relative">
+    <div class="nav-wrapper">
+        <div class="container">
+            <a href="/" class="brand-logo left">Logo</a>
+            <ul class="right">
+                <% var menu=config.menu||{} %>
+                    <% for(var item in menu){ %>
+                        <li>
+                            <a href="<%= menu[item] %>">
+                                <%= item %>
+                            </a>
+                        </li>
+                        <%}%>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,16 @@
+<div id="tag-list" class="card">
+    <header class="card-title common-title">
+        <span class="card-title">
+            标签
+        </span>
+    </header>
+    <div class="divider"></div>
+    <section class="common-title">
+        <% site.tags.each(function(tag){ %>
+            <a class="chip indigo lighten-3 white-text" href="/<%=tag.path%>">
+                <%= tag.name %>
+                    <%= tag.length%>
+            </a>
+            <%}) %>
+    </section>
+</div>

@@ -1,0 +1,17 @@
+<footer class="footer page-footer white">
+    <div class="container center">
+        <a href="<%= config.repo.link %>" target="_blank" title="<%= config.repo.name%>">
+            <img src="/img/github.png" width="40" height="40" />
+        </a>
+    </div>
+    <div class="container center grey-text">
+        Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> @
+        <span id="year-footer"></span>
+        <a href="<%= config.repo.link %>" title="<%= config.repo.name %>" target="_blank">
+            <%= config.repo.name %>
+        </a>
+    </div>
+</footer>
+<script>
+    document.getElementById('year-footer').innerHTML=new Date().getFullYear();
+</script>
